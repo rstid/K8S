@@ -7,7 +7,6 @@ spec:
   selector:
     app: dvwa-web
     tier: frontend
-  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8081
