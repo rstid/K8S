@@ -144,6 +144,7 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       # username: ${ELASTICSEARCH_USERNAME}
       # password: ${ELASTICSEARCH_PASSWORD}
+      allow_older_versions: true
     setup.kibana:
       host: "kibana-new-69b8df4c56-t49j8:5601"
 ---
