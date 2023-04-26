@@ -41,27 +41,20 @@ daemonset:
           - /var/log/containers/*.log
         processors:
         - add_kubernetes_metadata:
-            host: ${NODE_NAME}
+            host: elasticsearch-master
             matchers:
             - logs_path:
                 logs_path: "/var/log/containers/"
 
       output.elasticsearch:
-        host: '${NODE_NAME}'
-        hosts: '["https://${ELASTICSEARCH_HOSTS:elasticsearch-master:9200}"]'
-        username: '${ELASTICSEARCH_USERNAME}'
-        password: '${ELASTICSEARCH_PASSWORD}'
-        protocol: https
-        ssl.certificate_authorities: ["/usr/share/filebeat/certs/ca.crt"]
+        host: 'elasticsearch-master'
+        hosts: '["http://elasticsearch-master-hl.elastic-system.svc.cluster.local:9200"]'
+        protocol: http
   # Only used when updateStrategy is set to "RollingUpdate"
   maxUnavailable: 1
   nodeSelector: {}
   # A list of secrets and their paths to mount inside the pod
   # This is useful for mounting certificates for security other sensitive values
-  secretMounts:
-    - name: elasticsearch-master-certs
-      secretName: elasticsearch-master-certs
-      path: /usr/share/filebeat/certs/
   #  - name: filebeat-certificates
   #    secretName: filebeat-certificates
   #    path: /usr/share/filebeat/certs
@@ -121,19 +114,12 @@ deployment:
             - /usr/share/filebeat/logs/filebeat
 
       output.elasticsearch:
-        host: "${NODE_NAME}"
-        hosts: '["https://${ELASTICSEARCH_HOSTS:elasticsearch-master:9200}"]'
-        username: "${ELASTICSEARCH_USERNAME}"
-        password: "${ELASTICSEARCH_PASSWORD}"
-        protocol: https
-        ssl.certificate_authorities: ["/usr/share/filebeat/certs/ca.crt"]
+        host: "elasticsearch-master"
+        hosts: '["http://elasticsearch-master-hl.elastic-system.svc.cluster.local:9200"]'
+        protocol: http
   nodeSelector: {}
   # A list of secrets and their paths to mount inside the pod
   # This is useful for mounting certificates for security other sensitive values
-  secretMounts:
-    - name: elasticsearch-master-certs
-      secretName: elasticsearch-master-certs
-      path: /usr/share/filebeat/certs/
   #  - name: filebeat-certificates
   #    secretName: filebeat-certificates
   #    path: /usr/share/filebeat/certs
