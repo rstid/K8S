@@ -204,8 +204,11 @@ data:
 
     output.elasticsearch:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
+      allow_older_versions: true
       # username: ${ELASTICSEARCH_USERNAME}
       # password: ${ELASTICSEARCH_PASSWORD}
+    setup.kibana:
+      host: "kibana-new-69b8df4c56-t49j8:5601"
 ---
 apiVersion: v1
 kind: ConfigMap
