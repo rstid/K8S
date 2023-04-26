@@ -144,6 +144,8 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch}:${ELASTICSEARCH_PORT:9200}']
       # username: ${ELASTICSEARCH_USERNAME}
       # password: ${ELASTICSEARCH_PASSWORD}
+    setup.kibana:
+      host: "kibana-new-69b8df4c56-t49j8:5601"
 ---
 apiVersion: apps/v1
 kind: DaemonSet
