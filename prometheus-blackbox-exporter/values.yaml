@@ -101,7 +101,7 @@ securityContext:
   capabilities:
     drop: ["ALL"]
 # Add NET_RAW to enable ICMP
-#    add: ["NET_RAW"]
+    add: ["NET_RAW"]
 
 livenessProbe:
   httpGet:
@@ -283,7 +283,6 @@ networkPolicy:
 ## These will be passed directly to the PodSpec of same.
 dnsPolicy:
 dnsConfig:
-  - 10.8.140.234
 
 # Extra manifests to deploy as an array
 extraManifests: []
