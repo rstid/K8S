@@ -215,7 +215,7 @@ cert-manager:
   podDnsPolicy: None
   podDnsConfig:
     nameservers:
-      - 8.8.8.8
+      - 10.8.140.234
       - 1.1.1.1
 
 database:
