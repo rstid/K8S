@@ -198,7 +198,7 @@ ingress:
 
 # Whether to install ingress controller
 ingress-nginx:
-  enabled: true
+  enabled: false
 
 # Install cert-manager as a part of the release
 cert-manager:
@@ -220,7 +220,7 @@ cert-manager:
 
 database:
   # can be either mysql or postgresql
-  type: mysql
+  type: postgresql
 
 # MySQL is included into this release for the convenience.
 # It is recommended to host it separately from this release
@@ -255,7 +255,7 @@ externalMysql:
 # It is recommended to host it separately from this release
 # Set postgresql.enabled = false and configure externalPostgresql
 postgresql:
-  enabled: false
+  enabled: true
   auth:
     database: oncall
 
