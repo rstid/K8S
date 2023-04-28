@@ -158,11 +158,11 @@ initScripts:
 ##
 service:
   type: ClusterIP
-  port: 80
-  targetPort: 8086
-  annotations: {}
-  labels: {}
-  portName: http
+  # port: 80
+  # targetPort: 8086
+  # annotations: {}
+  # labels: {}
+  # portName: http
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created
