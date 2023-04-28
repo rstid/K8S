@@ -139,10 +139,10 @@ config:
   outputs:
     - influxdb_v2:
         urls:
-          - "http://influxdb.cybrust.local/api/v2/telegrafs/0b1d75016be5a000"
+          - "http://influx-db-influxdb2"
         bucket: "telegraf"
-        token: "8DqJEbnqWo4SbuAe0WqdzaKluYxv7FbnOPYllZyWgsKHXsBFx2tHh4_wjZ_DmWJCVFQNk8MeB68Kec0LbMwg7A=="
-        organization: "CYBRUST"
+        token: "wkrU6QDnsfmvfURZEtlViva8GyoknwA0umHQzGhcIndD2X_Al1a4iam7qEbTJjKr0icJ0Dl2tiN-WRfVyrJtng=="
+        organization: "influxdata"
   inputs:
     - statsd:
         service_address: ":8125"
