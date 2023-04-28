@@ -139,7 +139,7 @@ config:
   outputs:
     - influxdb_v2:
         urls:
-          - "http://influx-db-influxdb2"
+          - "http://influxdb.cybrust.local/api/v2/telegrafs/0b1d75016be5a000"
         bucket: "telegraf"
         token: "8DqJEbnqWo4SbuAe0WqdzaKluYxv7FbnOPYllZyWgsKHXsBFx2tHh4_wjZ_DmWJCVFQNk8MeB68Kec0LbMwg7A=="
         organization: "CYBRUST"
