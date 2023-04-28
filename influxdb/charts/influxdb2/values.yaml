@@ -161,8 +161,8 @@ service:
   port: 80
   # targetPort: 8086
   annotations: {}
-  labels: {}
-  portName: http
+  # labels: {}
+  # portName: http
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created
