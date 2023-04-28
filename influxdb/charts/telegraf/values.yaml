@@ -139,7 +139,7 @@ config:
   outputs:
     - influxdb:
         urls:
-          - "http://influxdb.cybrust.local:8086"
+          - "http://influx-db-influxdb2:8086"
         database: "telegraf"
   inputs:
     - statsd:
