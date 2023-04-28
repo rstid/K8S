@@ -61,10 +61,10 @@ livenessProbe: {}
   # failureThreshold: 3
 
 readinessProbe: {}
-  enabled: true
-  httpGet:
-    path: /
-    port: http
+  path: "/ping"
+  initialDelaySeconds: 5
+  timeoutSeconds: 1
+  # scheme: HTTP
   # path: "/health"
   # scheme: "HTTP"
   # initialDelaySeconds: 0
