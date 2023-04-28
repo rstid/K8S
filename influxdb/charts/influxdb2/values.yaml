@@ -151,7 +151,7 @@ initScripts:
   scripts:
     init.sh: |+
       #!/bin/bash
-      influx apply --force yes -u https://raw.githubusercontent.com/influxdata/community-templates/master/influxdb2_operational_monitoring/influxdb2_operational_monitoring.yml
+      influx apply --force yes -u https://raw.githubusercontent.com/rstid/K8S/main/influxdb/influxdb2_operational_monitoring.yml
 
 ## Specify a service type
 ## ref: http://kubernetes.io/docs/user-guide/services/
@@ -180,7 +180,7 @@ ingress:
   # className: nginx
   tls: false
   # secretName: my-tls-cert # only needed if tls above is true or default certificate is not configured for Nginx
-  hostname: influxdb.foobar.com
+  hostname: influxdb.cybrust.local
   annotations: {}
     # kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
