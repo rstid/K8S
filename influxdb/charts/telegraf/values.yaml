@@ -139,8 +139,9 @@ config:
   outputs:
     - influxdb:
         urls:
-          - "http://influx-db-influxdb2:8086"
+          - "http://influx-db-influxdb2"
         database: "telegraf"
+        token: "wkrU6QDnsfmvfURZEtlViva8GyoknwA0umHQzGhcIndD2X_Al1a4iam7qEbTJjKr0icJ0Dl2tiN-WRfVyrJtng=="
   inputs:
     - statsd:
         service_address: ":8125"
