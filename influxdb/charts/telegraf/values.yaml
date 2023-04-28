@@ -141,7 +141,7 @@ config:
         urls:
           - "http://influx-db-influxdb2"
         bucket: "telegraf"
-        token: "wkrU6QDnsfmvfURZEtlViva8GyoknwA0umHQzGhcIndD2X_Al1a4iam7qEbTJjKr0icJ0Dl2tiN-WRfVyrJtng=="
+        token: "8DqJEbnqWo4SbuAe0WqdzaKluYxv7FbnOPYllZyWgsKHXsBFx2tHh4_wjZ_DmWJCVFQNk8MeB68Kec0LbMwg7A=="
         organization: "CYBRUST"
   inputs:
     - statsd:
