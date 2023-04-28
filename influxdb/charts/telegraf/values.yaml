@@ -153,6 +153,12 @@ config:
         metric_separator: "_"
         allowed_pending_messages: 10000
         percentile_limit: 1000
+    - http_response:
+        urls:
+          - "https://bri.co.id"
+        method: "GET"
+        follow_redirects: true
+        
 metrics:
   health:
     enabled: false
