@@ -137,11 +137,12 @@ config:
             problem: 2
             critical: 3
   outputs:
-    - influxdb:
+    - influxdb_v2:
         urls:
           - "http://influx-db-influxdb2"
-        database: "telegraf"
+        bucket: "telegraf"
         token: "wkrU6QDnsfmvfURZEtlViva8GyoknwA0umHQzGhcIndD2X_Al1a4iam7qEbTJjKr0icJ0Dl2tiN-WRfVyrJtng=="
+        organization: "CYBRUST"
   inputs:
     - statsd:
         service_address: ":8125"
