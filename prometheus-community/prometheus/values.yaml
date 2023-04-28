@@ -640,7 +640,7 @@ serverFiles:
           - targets:
             - localhost:9090
       
-      - job_name: 'uptime'
+      - job_name: 'uptime-kuma'
         scrape_interval: 30s
         scheme: http
         static_configs:
