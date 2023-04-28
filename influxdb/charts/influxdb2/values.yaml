@@ -156,17 +156,13 @@ initScripts:
 ## Specify a service type
 ## ref: http://kubernetes.io/docs/user-guide/services/
 ##
-# service:
-#   type: ClusterIP
-#   port: 80
-#   targetPort: 8086
-#   annotations: {}
-#   labels: {}
-#   portName: http
 service:
-  enabled: true
   type: ClusterIP
+  port: 80
+  # targetPort: 8086
   annotations: {}
+  labels: {}
+  portName: http
 
 serviceAccount:
   # Specifies whether a ServiceAccount should be created
