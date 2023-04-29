@@ -171,7 +171,7 @@ env: {}
 
 # Enable ingress object for external access to the resources
 ingress:
-  enabled: true
+  enabled: false
   #  className: ""
   annotations:
     kubernetes.io/ingress.class: "nginx"
@@ -198,7 +198,7 @@ ingress:
 
 # Whether to install ingress controller
 ingress-nginx:
-  enabled: true
+  enabled: false
 
 # Install cert-manager as a part of the release
 cert-manager:
