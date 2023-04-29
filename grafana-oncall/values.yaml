@@ -2,7 +2,7 @@
 
 # Set the domain name Grafana OnCall will be installed on.
 # If you want to install grafana as a part of this release make sure to configure grafana.grafana.ini.server.domain too
-base_url: example.com
+base_url: oncall.cybrust.local
 
 image:
   # Grafana OnCall docker image repository
@@ -310,7 +310,7 @@ grafana:
   enabled: true
   grafana.ini:
     server:
-      domain: example.com
+      domain: oncall.cybrust.local
       root_url: "%(protocol)s://%(domain)s/grafana"
       serve_from_sub_path: true
   persistence:
