@@ -2,7 +2,7 @@
 
 # Set the domain name Grafana OnCall will be installed on.
 # If you want to install grafana as a part of this release make sure to configure grafana.grafana.ini.server.domain too
-base_url: grafana-oncall.cybrust.local
+base_url: example.com
 
 image:
   # Grafana OnCall docker image repository
@@ -198,7 +198,7 @@ ingress:
 
 # Whether to install ingress controller
 ingress-nginx:
-  enabled: false
+  enabled: true
 
 # Install cert-manager as a part of the release
 cert-manager:
@@ -215,12 +215,12 @@ cert-manager:
   podDnsPolicy: None
   podDnsConfig:
     nameservers:
-      - 10.8.140.234
+      - 8.8.8.8
       - 1.1.1.1
 
 database:
   # can be either mysql or postgresql
-  type: postgresql
+  type: mysql
 
 # MySQL is included into this release for the convenience.
 # It is recommended to host it separately from this release
@@ -255,7 +255,7 @@ externalMysql:
 # It is recommended to host it separately from this release
 # Set postgresql.enabled = false and configure externalPostgresql
 postgresql:
-  enabled: true
+  enabled: false
   auth:
     database: oncall
 
@@ -310,7 +310,7 @@ grafana:
   enabled: true
   grafana.ini:
     server:
-      domain: grafana-oncall.cybrust.local
+      domain: example.com
       root_url: "%(protocol)s://%(domain)s/grafana"
       serve_from_sub_path: true
   persistence:
