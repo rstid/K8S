@@ -7,7 +7,7 @@ base_url: oncall.cybrust.local
 image:
   # Grafana OnCall docker image repository
   repository: grafana/oncall
-  tag:
+  tag: v1.1.26
   pullPolicy: Always
 
 # Whether to create additional service for external connections
@@ -202,7 +202,7 @@ ingress-nginx:
 
 # Install cert-manager as a part of the release
 cert-manager:
-  enabled: true
+  enabled: false
   # Instal CRD resources
   installCRDs: true
   webhook:
@@ -307,7 +307,7 @@ externalRedis:
 # Grafana is included into this release for the convenience.
 # It is recommended to host it separately from this release
 grafana:
-  enabled: true
+  enabled: false
   grafana.ini:
     server:
       domain: oncall.cybrust.local
@@ -319,7 +319,7 @@ grafana:
     - grafana-oncall-app
 
 externalGrafana:
-  url:
+  url: http://grafana
 
 nameOverride: ""
 fullnameOverride: ""
