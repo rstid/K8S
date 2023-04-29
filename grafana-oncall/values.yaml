@@ -7,7 +7,7 @@ base_url: oncall.cybrust.local
 image:
   # Grafana OnCall docker image repository
   repository: grafana/oncall
-  tag: v1.1.26
+  tag: v1.2.15
   pullPolicy: Always
 
 # Whether to create additional service for external connections
